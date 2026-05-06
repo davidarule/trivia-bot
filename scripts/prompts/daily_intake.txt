@@ -48,17 +48,12 @@ If a pattern's first search doesn't surface a clearly notable story, try at leas
 OUTPUT FORMAT
 Begin directly with the first bullet — no title, no preamble, no meta-commentary.
 
-Bullets grouped by the question pattern that surfaced them. For each bullet write exactly two lines:
-  Line 1: the fact stated plainly (who did what, where, when).
-  Line 2: one line of genuine context — the date, location, or why this story matters to a trivia crowd. Do NOT write "context:" followed by a description of why this qualifies as trivia. Do NOT add editorial commentary such as "a classic trivia answer", "a pub-night staple", "clean named answer is X", "useful as a 'year' or 'who' question", or any similar phrase. Write it as a short plain-English sentence a host could read aloud.
+One line per bullet. Pattern header in bold, then a dash, then the fact. Pack the key named answer (name, number, place, date) into that single line. No second sentence. No context line. No editorial commentary.
 
 Good example:
   **Who has the new #1?** — Olivia Rodrigo's "Drop Dead" debuted at No. 1 on the Billboard Hot 100 (week of 29 April), bumping Ella Langley's "Choosin' Texas" to No. 2.
-  It's Rodrigo's fourth No. 1, making her the only artist to debut lead singles from her first three albums at the top of the chart.
-
-Bad example (do not do this):
-  **What did the government do?** — The RBA lifted the cash rate by 25 basis points to 4.35% on 5 May.
-  Context: marquee Aussie business story; clean named answer is "4.35%".
+  **Who wore ___?** — Margot Robbie's custom Chanel dress at the 2026 Met Gala took 761 hours to make.
+  **What happened 72 years ago today?** — Roger Bannister ran the first sub-four-minute mile at Oxford's Iffley Road track (3:59.4, 6 May 1954).
 
 Aim for 8-15 bullets total. If it's a slow news day, fewer is fine. The script handles Discord message splitting, so do not truncate for length.
 
