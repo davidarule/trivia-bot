@@ -5,6 +5,8 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+import re
+
 import anthropic
 import requests
 
@@ -13,6 +15,28 @@ INTAKE_DAYS = {0, 2, 4}  # Mon, Wed, Fri
 INTAKE_HOUR = 17
 DISCORD_MAX_CHARS = 1900  # headroom under Discord's 2000 limit
 MODEL = "claude-opus-4-7"
+
+
+def clean_response_text(text: str) -> str:
+    """Tidy up Claude's response for Discord rendering.
+
+    Strategy: split into paragraph blocks on blank lines, collapse each block
+    to a single line (removing internal newlines and citation residue), then
+    drop blocks that are empty or pure punctuation/footnote artefacts.
+    """
+    blocks = re.split(r"\n{2,}", text)
+    cleaned = []
+    for block in blocks:
+        # Collapse internal newlines to spaces
+        line = re.sub(r"\n+", " ", block).strip()
+        # Drop citation-residue lines: lone punctuation, digits, or [^1]-style markers
+        if re.fullmatch(r"[\s.,;:\-]+", line):
+            continue
+        if re.fullmatch(r"\[\^?\d+\]", line):
+            continue
+        if line:
+            cleaned.append(line)
+    return "\n\n".join(cleaned).strip()
 
 
 def in_intake_window(now: datetime) -> bool:
@@ -32,7 +56,8 @@ def call_claude(prompt: str) -> str:
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
         messages=[{"role": "user", "content": prompt}],
     )
-    return "\n".join(b.text for b in response.content if hasattr(b, "text"))
+    raw = "\n".join(b.text for b in response.content if hasattr(b, "text"))
+    return clean_response_text(raw)
 
 
 def split_for_discord(text: str, limit: int = DISCORD_MAX_CHARS) -> list[str]:
