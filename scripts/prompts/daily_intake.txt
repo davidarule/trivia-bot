@@ -1,15 +1,16 @@
 Find light-hearted, trivia-worthy news stories from the past 48 hours suitable for a pub trivia night in Newcastle/Lake Macquarie, NSW, Australia. Today's date is [DATE]. This is a daily intake report that will be collated into a weekly trivia brief on Tuesday at 6pm AEST.
 
+IMPORTANT: Begin your response directly with the first bullet point. Do not include any preamble, search narration, meta-commentary, or explanation of what you are about to do. Do not output a heading or title. The first character of your response must be the start of the first bullet.
+
 COVERAGE
 - Mix of Australian and major global stories, weighted roughly 60/40 toward Australian content.
-- Within the Australian content, actively look for NSW state-level stories — not just national.
+- Australian politics should cover federal AND all state governments — not just NSW.
 
 STORY TYPES TO INCLUDE
 - Celebrity, royals, entertainment news
 - Sport results, oddities, records, retirements, transfers, milestones
 - Major business or sport news (acquisitions, launches). Do not filter for "quirky" — a major company or league story is marquee trivia content even when serious in tone, as long as it has a clean named answer.
-- Politics, court rulings, political gaffes, resignations — include any with a clean named answer; exclude only the grim ones (see below)
-- NSW state politics: Premier announcements, state budget decisions, NSW election results, state government gaffes or policy changes — any with a clean named answer
+- Politics, court rulings, political gaffes, resignations — federal and all state/territory governments. Include any with a clean named answer; exclude only the grim ones (see below).
 - Viral social media moments: TikTok, YouTube, or X/Instagram moments that have crossed into mainstream news coverage (must be reported by a major outlet, not just social shares). Examples: record-breaking videos, viral stunts, celebrity posts that caused a stir, meme-worthy public moments.
 - Viral animals, weird science, quirky human-interest, unusual records, weather oddities
 - Food, drink, pop culture milestones
@@ -36,7 +37,7 @@ Pub trivia hosts pull "this week in news" questions from a small set of recurrin
 - "What unusual thing happened in [Australian city]?" — wildlife incidents, weather oddities, viral local news. Check ABC News, news.com.au, 9News, 7News, and city-specific outlets.
 - "Who said / did / wore ___?" — quotable gaffes, viral moments, surprising public statements, notable red-carpet or sporting-arena moments.
 - "What's new / launched / announced?" — major product launches, scientific findings with a clean headline, surprise album drops, casting announcements.
-- "What did the NSW/state government do?" — Premier announcements, state budget items, NSW political gaffes or policy decisions with a clean named answer. Check ABC News, SMH, Newcastle Herald.
+- "What did [government] do?" — federal or any state/territory political decision, budget item, political gaffe or policy change with a clean named answer. Check ABC News, SMH, The Age, Newcastle Herald.
 - "What went viral this week?" — social media moment reported by a mainstream outlet: record-breaking video, viral stunt, celebrity post, meme-worthy public moment. Must have a clean named subject.
 - "What happened on this day X years ago?" — search for round-number anniversaries (10, 25, 50, 75, 100, 150, 200 years) of notable events on today's calendar date. Cover sport, science, politics, culture, exploration, invention. Include even if not in today's news. State the year and how many years ago it was.
 
@@ -45,7 +46,21 @@ Each bullet should be shaped like an answer to one of these patterns — i.e., h
 If a pattern's first search doesn't surface a clearly notable story, try at least one alternative angle (named sponsors, specific geographies, common acronyms) before concluding the pattern is quiet today.
 
 OUTPUT FORMAT
-Brief daily intake — no headings, no shortlist, no rollup. Just bullets, grouped by the question pattern that surfaced them. Each bullet: one sentence stating the fact, one line of context (date, location, or why it matters). Aim for 8-15 bullets total. If it's a slow news day, fewer is fine. The script handles Discord message splitting, so do not truncate for length.
+Begin directly with the first bullet — no title, no preamble, no meta-commentary.
+
+Bullets grouped by the question pattern that surfaced them. For each bullet write exactly two lines:
+  Line 1: the fact stated plainly (who did what, where, when).
+  Line 2: one line of genuine context — the date, location, or why this story matters to a trivia crowd. Do NOT write "context:" followed by a description of why this qualifies as trivia. Write it as a short plain-English sentence a host could read aloud.
+
+Good example:
+  **Who has the new #1?** — Olivia Rodrigo's "Drop Dead" debuted at No. 1 on the Billboard Hot 100 (week of 29 April), bumping Ella Langley's "Choosin' Texas" to No. 2.
+  It's Rodrigo's fourth No. 1, making her the only artist to debut lead singles from her first three albums at the top of the chart.
+
+Bad example (do not do this):
+  **What did the government do?** — The RBA lifted the cash rate by 25 basis points to 4.35% on 5 May.
+  Context: marquee Aussie business story; clean named answer is "4.35%".
+
+Aim for 8-15 bullets total. If it's a slow news day, fewer is fine. The script handles Discord message splitting, so do not truncate for length.
 
 SOURCES
 - Australian: ABC News Australia, news.com.au, The Guardian Australia, Sydney Morning Herald, The Age, 9News, 7News, Newcastle Herald

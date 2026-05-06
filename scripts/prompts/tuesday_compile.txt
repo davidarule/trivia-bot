@@ -9,17 +9,19 @@ In addition, do a fresh web sweep to catch anything that has broken since the mo
 [INTAKES]
 </intakes>
 
+IMPORTANT: Begin your response directly with the first section heading. Do not include any preamble, search narration, or meta-commentary.
+
 COVERAGE
 - Mix of Australian and major global stories, weighted roughly 60/40 toward Australian content.
 - Skew toward stories from days 3-10 ago over the last 24 hours, since trivia hosts usually write questions a few days ahead.
-- Within the Australian content, actively include NSW state-level stories — not just national.
+- Australian politics should cover federal AND all state/territory governments — not just NSW.
 
 STORY TYPES TO INCLUDE
 - Celebrity, royals, entertainment news
 - Sport results, oddities, records, retirements, transfers, milestones
 - Major business or sport news (acquisitions, launches) with a clean named answer
 - Politics, court rulings, political gaffes, resignations with a clean named answer; exclude grim ones
-- NSW state politics: Premier announcements, state budget decisions, state election results, state government gaffes or policy changes — any with a clean named answer
+- Politics, court rulings, gaffes, resignations — federal and all state/territory governments, with a clean named answer; exclude grim ones
 - Viral social media moments reported by mainstream outlets: record-breaking videos, viral stunts, celebrity posts, meme-worthy public moments — must have a clean named subject
 - Viral animals, weird science, quirky human-interest, unusual records, weather oddities
 - Food, drink, pop culture milestones
@@ -44,7 +46,7 @@ QUESTION PATTERNS TO ACTIVELY HUNT FOR
 - "What unusual thing happened in [Australian city]?"
 - "Who said / did / wore ___?"
 - "What's new / launched / announced?"
-- "What did the NSW/state government do?" (Premier announcements, state budget items, NSW political gaffes)
+- "What did [government] do?" (federal or any state/territory political decision, budget item, gaffe, or policy change with a clean named answer)
 - "What went viral this week?" (social media moment reported by a mainstream outlet)
 
 If a pattern's first search doesn't surface a clearly notable story, try at least one alternative angle (named sponsors, specific geographies, common acronyms) before concluding the pattern is quiet this week.
