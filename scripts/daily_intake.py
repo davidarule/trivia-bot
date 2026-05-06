@@ -20,16 +20,26 @@ MODEL = "claude-opus-4-7"
 def clean_response_text(text: str) -> str:
     """Tidy up Claude's response for Discord rendering.
 
-    Strategy: split into paragraph blocks on blank lines, collapse each block
-    to a single line (removing internal newlines and citation residue), then
-    drop blocks that are empty or pure punctuation/footnote artefacts.
+    1. Strip any 'Daily intake — ...' heading (the script prepends its own).
+    2. Strip preamble (search narration) before the first question-pattern header.
+    3. Ensure each bullet is its own block by inserting blank lines before bullet markers.
+    4. Split into paragraph blocks, collapse internal newlines, drop citation residue.
     """
+    # Strip any Daily intake heading emitted by Claude
+    text = re.sub(r"\*?\*?Daily intake[^\n]*\n?", "", text, flags=re.IGNORECASE)
+
+    # Strip preamble before the first bold question-pattern header
+    match = re.search(r"\*\*(?:Who|Which|What|World|When)", text)
+    if match:
+        text = text[match.start():]
+
+    # Force each bullet onto its own block by inserting a blank line before bullet markers
+    text = re.sub(r"\n(\s*[-*•])", r"\n\n\1", text)
+
     blocks = re.split(r"\n{2,}", text)
     cleaned = []
     for block in blocks:
-        # Collapse internal newlines to spaces
         line = re.sub(r"\n+", " ", block).strip()
-        # Drop citation-residue lines: lone punctuation, digits, or [^1]-style markers
         if re.fullmatch(r"[\s.,;:\-]+", line):
             continue
         if re.fullmatch(r"\[\^?\d+\]", line):
@@ -53,10 +63,12 @@ def call_claude(prompt: str) -> str:
     response = client.messages.create(
         model=MODEL,
         max_tokens=4096,
+        system="You are a trivia research assistant. When you have finished your research, output only the final brief with no preamble, narration, or meta-commentary. Never describe what you are about to do or have done. Begin your response with the first bullet point.",
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
         messages=[{"role": "user", "content": prompt}],
     )
-    raw = "\n".join(b.text for b in response.content if hasattr(b, "text"))
+    text_blocks = [b.text for b in response.content if hasattr(b, "text")]
+    raw = text_blocks[-1] if text_blocks else ""
     return clean_response_text(raw)
 
 
