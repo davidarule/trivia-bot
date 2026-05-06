@@ -35,7 +35,7 @@ Pub trivia hosts pull "this week in news" questions from a small set of recurrin
 - "Which league / company / competition is in the news?" — any major event with a clean named answer.
 - "World record set or broken?" — sport, science, Guinness-style achievements (longest, biggest, fastest, oldest, first-ever).
 - "What unusual thing happened in [Australian city]?" — wildlife incidents, weather oddities, viral local news. Check ABC News, news.com.au, 9News, 7News, and city-specific outlets.
-- "Who said / did / wore ___?" — quotable gaffes, viral moments, surprising public statements, notable red-carpet or sporting-arena moments.
+- "Who said / did / wore ___?" — quotable gaffes, viral moments, surprising public statements, notable red-carpet moments with a specific verifiable detail (time taken to make, designer, record broken). Exclude vague or subjective observations such as who arrived late, who looked good, or any entry without a clean named/numbered answer.
 - "What's new / launched / announced?" — major product launches, scientific findings with a clean headline, surprise album drops, casting announcements.
 - "What did [government] do?" — federal or any state/territory political decision, budget item, political gaffe or policy change with a clean named answer. Check ABC News, SMH, The Age, Newcastle Herald.
 - "What went viral this week?" — social media moment reported by a mainstream outlet: record-breaking video, viral stunt, celebrity post, meme-worthy public moment. Must have a clean named subject.
