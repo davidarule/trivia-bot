@@ -36,7 +36,7 @@ STORY TYPES TO EXCLUDE
 - Serious illness of public figures (unless the story is the recovery/return)
 - Cold cases, missing persons, historical disappearances, presumed-murdered investigations, body recoveries — excluded even if framed as a "breakthrough" or "development"
 
-The EXCLUDE list is mandatory and overrides every INCLUDE pattern, including "Australian local quirks". If a story belongs in both categories, exclude it.
+The EXCLUDE list is mandatory and overrides every INCLUDE pattern, including "Australian local quirks". If a story belongs in both categories, exclude it. Note: the EXCLUDE list applies to current news only — historical "on this day" anniversaries are exempt.
 
 QUESTION PATTERNS TO ACTIVELY HUNT FOR
 - "Who has the new #1 ___?" (charts: Billboard Hot 100, ARIA, box office, Steam, NYT bestsellers)
@@ -50,6 +50,8 @@ QUESTION PATTERNS TO ACTIVELY HUNT FOR
 - "What went viral this week?" (social media moment reported by a mainstream outlet)
 
 If a pattern's first search doesn't surface a clearly notable story, try at least one alternative angle (named sponsors, specific geographies, common acronyms) before concluding the pattern is quiet this week.
+
+Every bullet must have a clean named/numbered answer (a name, a number, a place, a date). This is a hard filter — drop any vague entry about "a strong group", "several", "a number of", "some", or "the team" without specific names or counts.
 
 COMPILATION RULES
 - Deduplicate stories that appeared across multiple daily intakes
@@ -75,7 +77,7 @@ SECTION 4 — This month in history
 If included: 20 famous events that happened anywhere in this calendar month (any day of the month), in any year from 1200AD to present. Mix sport, science, politics, culture, disasters, discoveries, premieres. Each entry: one sentence stating the event, the year, and the specific date if known.
 
 SECTION 5 — On this day (always)
-Collate all "on this day" anniversary entries surfaced across the daily intakes this week, plus do a fresh search for any round-number anniversaries (10, 25, 50, 75, 100, 150, 200 years) on today's exact calendar date that weren't already captured. Aim for 8-12 entries. Mix sport, science, politics, culture, exploration, invention. Each entry: one sentence stating the event, the year, and how many years ago it was. For famous births, always include the person's current age.
+Collate all "on this day" anniversary entries surfaced across the daily intakes this week, plus do a fresh search for any notable events on today's exact calendar date that weren't already captured. Aim for 8-12 entries. Mix sport, science, politics, culture, exploration, invention, historical disasters. Each entry: one sentence stating the event, the year, and how many years ago it was. For famous births, always include the person's current age. No round-number constraint — any year is fair game.
 
 SOURCES
 - Australian: ABC News Australia, news.com.au, The Guardian Australia, Sydney Morning Herald, The Age, 9News, 7News, Newcastle Herald

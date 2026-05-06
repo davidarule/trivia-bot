@@ -15,7 +15,7 @@ STORY TYPES TO INCLUDE
 - Viral animals, weird science, quirky human-interest, unusual records, weather oddities
 - Food, drink, pop culture milestones
 - Australian local quirks: wildlife incidents, weather oddities, viral local news. Australian hosts love these and they are often missed by global wires.
-- "On this day" anniversaries: round-number milestones (10, 25, 50, 75, 100, 150, 200 years) of notable events on this calendar date — sporting moments, scientific discoveries, cultural firsts, famous births, landmark political events. Include even if not actively covered in today's news. Favour events with a clean named answer. Draw from any year in history.
+- "On this day" anniversaries: notable events on this calendar date, any year. Sporting moments, scientific discoveries, cultural firsts, famous births, landmark political events, historical disasters. Include even if not actively covered in today's news. Favour events with a clean named answer. No round-number constraint — any year is fair game.
 
 STORY TYPES TO EXCLUDE
 - Deaths, fatal accidents, murders, terror attacks
@@ -25,7 +25,7 @@ STORY TYPES TO EXCLUDE
 - Serious illness of public figures (unless the story is the recovery/return)
 - Cold cases, missing persons, historical disappearances, presumed-murdered investigations, body recoveries — excluded even if framed as a "breakthrough" or "development"
 
-The EXCLUDE list is mandatory and overrides every INCLUDE pattern, including "Australian local quirks". If a story belongs in both categories, exclude it.
+The EXCLUDE list is mandatory and overrides every INCLUDE pattern, including "Australian local quirks". If a story belongs in both categories, exclude it. Note: the EXCLUDE list applies to current news only — historical "on this day" anniversaries are exempt (the Hindenburg, Titanic, etc. are legitimate historical trivia).
 
 QUESTION PATTERNS TO ACTIVELY HUNT FOR
 Pub trivia hosts pull "this week in news" questions from a small set of recurring patterns. For each pattern, check whether a notable story exists and include it if so. If a pattern is quiet, skip it — do not force a weak entry.
@@ -39,9 +39,14 @@ Pub trivia hosts pull "this week in news" questions from a small set of recurrin
 - "What's new / launched / announced?" — major product launches, scientific findings with a clean headline, surprise album drops, casting announcements.
 - "What did [government] do?" — federal or any state/territory political decision, budget item, political gaffe or policy change with a clean named answer. Check ABC News, SMH, The Age, Newcastle Herald.
 - "What went viral this week?" — social media moment reported by a mainstream outlet: record-breaking video, viral stunt, celebrity post, meme-worthy public moment. Must have a clean named subject.
-- "What happened on this day X years ago?" — search for round-number anniversaries (10, 25, 50, 75, 100, 150, 200 years) of notable events on today's calendar date. Cover sport, science, politics, culture, exploration, invention. Include even if not in today's news. Always state the year and how many years ago it was. For famous births, always include the person's current age. State facts only — do not add editorial commentary about why something makes good trivia (e.g. do not write "a classic trivia answer", "a pub-night staple", "useful as a 'year' or 'who' question", or any similar phrase).
+- "What happened on this day X years ago?" — search for notable events on today's calendar date from any year in history. Cover sport, science, politics, culture, exploration, invention, historical disasters. Include even if not in today's news. Always state the year and how many years ago it was. For famous births, always include the person's current age. State facts only — do not add editorial commentary about why something makes good trivia (e.g. do not write "a classic trivia answer", "a pub-night staple", "useful as a 'year' or 'who' question", or any similar phrase).
 
-Each bullet should be shaped like an answer to one of these patterns — i.e., have a clean named/numbered answer (a name, a number, a place, a date) that the host could ask for.
+Each bullet must have a clean named/numbered answer (a name, a number, a place, a date) that the host could ask for. This is a hard filter — if you cannot identify a specific name, number, place or date as the answer, drop the bullet entirely. Vague entries about "a strong group", "several players", "a number of", "some", or "the team" without specific names or counts are not acceptable.
+
+Examples of bullets to drop:
+  Bad: "The Knights had a strong group of players selected for the NSW City vs Country campaign." — no names, no number.
+  Bad: "Several Hollywood stars attended a charity gala in LA this weekend." — no names.
+  Bad: "A new Australian film opened to good reviews." — no title, no numbers.
 
 If a pattern's first search doesn't surface a clearly notable story, try at least one alternative angle (named sponsors, specific geographies, common acronyms) before concluding the pattern is quiet today.
 
