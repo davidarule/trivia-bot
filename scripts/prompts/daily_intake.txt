@@ -2,15 +2,19 @@ Find light-hearted, trivia-worthy news stories from the past 48 hours suitable f
 
 COVERAGE
 - Mix of Australian and major global stories, weighted roughly 60/40 toward Australian content.
+- Within the Australian content, actively look for NSW state-level stories — not just national.
 
 STORY TYPES TO INCLUDE
 - Celebrity, royals, entertainment news
 - Sport results, oddities, records, retirements, transfers, milestones
 - Major business or sport news (acquisitions, launches). Do not filter for "quirky" — a major company or league story is marquee trivia content even when serious in tone, as long as it has a clean named answer.
 - Politics, court rulings, political gaffes, resignations — include any with a clean named answer; exclude only the grim ones (see below)
+- NSW state politics: Premier announcements, state budget decisions, NSW election results, state government gaffes or policy changes — any with a clean named answer
+- Viral social media moments: TikTok, YouTube, or X/Instagram moments that have crossed into mainstream news coverage (must be reported by a major outlet, not just social shares). Examples: record-breaking videos, viral stunts, celebrity posts that caused a stir, meme-worthy public moments.
 - Viral animals, weird science, quirky human-interest, unusual records, weather oddities
 - Food, drink, pop culture milestones
 - Australian local quirks: wildlife incidents, weather oddities, viral local news. Australian hosts love these and they are often missed by global wires.
+- "On this day" anniversaries: round-number milestones (10, 25, 50, 75, 100, 150, 200 years) of notable events on this calendar date — sporting moments, scientific discoveries, cultural firsts, famous births, landmark political events. Include even if not actively covered in today's news. Favour events with a clean named answer. Draw from any year in history.
 
 STORY TYPES TO EXCLUDE
 - Deaths, fatal accidents, murders, terror attacks
@@ -23,7 +27,7 @@ STORY TYPES TO EXCLUDE
 The EXCLUDE list is mandatory and overrides every INCLUDE pattern, including "Australian local quirks". If a story belongs in both categories, exclude it.
 
 QUESTION PATTERNS TO ACTIVELY HUNT FOR
-Pub trivia hosts pull "this week in news" questions from a small set of recurring patterns. For each pattern, check whether a notable story exists today and include it if so. If a pattern is quiet, skip it — do not force a weak entry.
+Pub trivia hosts pull "this week in news" questions from a small set of recurring patterns. For each pattern, check whether a notable story exists and include it if so. If a pattern is quiet, skip it — do not force a weak entry.
 
 - "Who has the new #1 ___?" — songs, albums, films, streaming shows, video games, books. Check whether anything has newly topped a major chart (Billboard Hot 100, ARIA Singles, weekend box office, Steam, NYT bestsellers).
 - "Who won ___?" — major sporting events, awards shows, elections, talent-show finales.
@@ -32,17 +36,21 @@ Pub trivia hosts pull "this week in news" questions from a small set of recurrin
 - "What unusual thing happened in [Australian city]?" — wildlife incidents, weather oddities, viral local news. Check ABC News, news.com.au, 9News, 7News, and city-specific outlets.
 - "Who said / did / wore ___?" — quotable gaffes, viral moments, surprising public statements, notable red-carpet or sporting-arena moments.
 - "What's new / launched / announced?" — major product launches, scientific findings with a clean headline, surprise album drops, casting announcements.
+- "What did the NSW/state government do?" — Premier announcements, state budget items, NSW political gaffes or policy decisions with a clean named answer. Check ABC News, SMH, Newcastle Herald.
+- "What went viral this week?" — social media moment reported by a mainstream outlet: record-breaking video, viral stunt, celebrity post, meme-worthy public moment. Must have a clean named subject.
+- "What happened on this day X years ago?" — search for round-number anniversaries (10, 25, 50, 75, 100, 150, 200 years) of notable events on today's calendar date. Cover sport, science, politics, culture, exploration, invention. Include even if not in today's news. State the year and how many years ago it was.
 
 Each bullet should be shaped like an answer to one of these patterns — i.e., have a clean named/numbered answer (a name, a number, a place, a date) that the host could ask for.
 
 If a pattern's first search doesn't surface a clearly notable story, try at least one alternative angle (named sponsors, specific geographies, common acronyms) before concluding the pattern is quiet today.
 
 OUTPUT FORMAT
-Brief daily intake — no headings, no shortlist, no rollup. Just bullets, grouped by the question pattern that surfaced them. Each bullet: one sentence stating the fact, one line of context (date, location, or why it matters). Aim for 5-10 bullets total. If it's a slow news day, fewer is fine. Keep it under 1500 characters total — this gets posted to a Discord channel.
+Brief daily intake — no headings, no shortlist, no rollup. Just bullets, grouped by the question pattern that surfaced them. Each bullet: one sentence stating the fact, one line of context (date, location, or why it matters). Aim for 8-15 bullets total. If it's a slow news day, fewer is fine. The script handles Discord message splitting, so do not truncate for length.
 
 SOURCES
 - Australian: ABC News Australia, news.com.au, The Guardian Australia, Sydney Morning Herald, The Age, 9News, 7News, Newcastle Herald
 - Global: BBC, Reuters, AP, CNN, Guardian
 - Specialist: Billboard for music charts, ARIA for Australian charts, Box Office Mojo for film, ESPN/Sky Sports for sport business news
+- Historical: Britannica, Wikipedia (for "on this day" verification), On This Day (.com)
 - Avoid tabloids that fabricate
 - Verify any surprising claim against a second source before including it

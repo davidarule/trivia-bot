@@ -12,15 +12,19 @@ In addition, do a fresh web sweep to catch anything that has broken since the mo
 COVERAGE
 - Mix of Australian and major global stories, weighted roughly 60/40 toward Australian content.
 - Skew toward stories from days 3-10 ago over the last 24 hours, since trivia hosts usually write questions a few days ahead.
+- Within the Australian content, actively include NSW state-level stories — not just national.
 
 STORY TYPES TO INCLUDE
 - Celebrity, royals, entertainment news
 - Sport results, oddities, records, retirements, transfers, milestones
 - Major business or sport news (acquisitions, launches) with a clean named answer
 - Politics, court rulings, political gaffes, resignations with a clean named answer; exclude grim ones
+- NSW state politics: Premier announcements, state budget decisions, state election results, state government gaffes or policy changes — any with a clean named answer
+- Viral social media moments reported by mainstream outlets: record-breaking videos, viral stunts, celebrity posts, meme-worthy public moments — must have a clean named subject
 - Viral animals, weird science, quirky human-interest, unusual records, weather oddities
 - Food, drink, pop culture milestones
 - Australian local quirks: wildlife incidents, weather oddities, viral local news
+- "On this day" anniversaries from the daily intakes: carry these through as a dedicated section
 
 STORY TYPES TO EXCLUDE
 - Deaths, fatal accidents, murders, terror attacks
@@ -40,6 +44,8 @@ QUESTION PATTERNS TO ACTIVELY HUNT FOR
 - "What unusual thing happened in [Australian city]?"
 - "Who said / did / wore ___?"
 - "What's new / launched / announced?"
+- "What did the NSW/state government do?" (Premier announcements, state budget items, NSW political gaffes)
+- "What went viral this week?" (social media moment reported by a mainstream outlet)
 
 If a pattern's first search doesn't surface a clearly notable story, try at least one alternative angle (named sponsors, specific geographies, common acronyms) before concluding the pattern is quiet this week.
 
@@ -48,15 +54,16 @@ COMPILATION RULES
 - Drop stale stories that have been overtaken by newer developments
 - Promote stories that have grown in significance since first intake
 - Add anything from the fresh Tuesday sweep that wasn't in the daily intakes
+- Carry through all "on this day" anniversary entries from the daily intakes into Section 5
 
 OUTPUT FORMAT
 Sections in this order:
 
 SECTION 1 — News brief (always)
-Grouped under five headings: Australia, Global, Sport, Entertainment, Weird/Quirky. Under each, 3-5 bullets. Each bullet: one sentence stating the fact, one line of context (date, location, or why it matters). Aim for 12-20 bullets total.
+Grouped under five headings: Australia, Global, Sport, Entertainment, Weird/Quirky. Under each, 3-5 bullets. Each bullet: one sentence stating the fact, one line of context (date, location, or why it matters). Aim for 15-25 bullets total.
 
 SECTION 2 — Most likely trivia question shortlist (always)
-3-5 stories shaped as the actual question the host might ask, each followed by the clean answer.
+5-8 stories shaped as the actual question the host might ask, each followed by the clean answer.
 
 SECTION 3 — Celebrity birthdays today (always)
 10 A-list household-name celebrities born on this calendar date (any year), each with their age today. Skip anyone who isn't a genuine household name globally or in Australia — no reality TV contestants, minor YouTubers, or niche figures. If fewer than 10 genuine A-listers were born today, list however many qualify and note the count.
@@ -65,9 +72,13 @@ SECTION 4 — This month in history
 [INCLUDE_MONTH_HISTORY]
 If included: 20 famous events that happened anywhere in this calendar month (any day of the month), in any year from 1200AD to present. Mix sport, science, politics, culture, disasters, discoveries, premieres. Each entry: one sentence stating the event, the year, and the specific date if known.
 
+SECTION 5 — On this day (always)
+Collate all "on this day" anniversary entries surfaced across the daily intakes this week, plus do a fresh search for any round-number anniversaries (10, 25, 50, 75, 100, 150, 200 years) on today's exact calendar date that weren't already captured. Aim for 8-12 entries. Mix sport, science, politics, culture, exploration, invention. Each entry: one sentence stating the event, the year, and how many years ago it was.
+
 SOURCES
 - Australian: ABC News Australia, news.com.au, The Guardian Australia, Sydney Morning Herald, The Age, 9News, 7News, Newcastle Herald
 - Global: BBC, Reuters, AP, CNN, Guardian
 - Specialist: Billboard, ARIA, Box Office Mojo, ESPN/Sky Sports
+- Historical: Britannica, Wikipedia, On This Day (.com)
 - Avoid tabloids that fabricate
 - Verify any surprising claim against a second source
