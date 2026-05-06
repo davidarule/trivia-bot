@@ -28,6 +28,9 @@ STORY TYPES TO EXCLUDE
 - Natural disasters with significant casualties
 - Sexual assault, child abuse, domestic violence
 - Serious illness of public figures (unless the story is the recovery/return)
+- Cold cases, missing persons, historical disappearances, presumed-murdered investigations, body recoveries — excluded even if framed as a "breakthrough" or "development"
+
+The EXCLUDE list is mandatory and overrides every INCLUDE pattern, including "Australian local quirks". If a story belongs in both categories, exclude it.
 
 QUESTION PATTERNS TO ACTIVELY HUNT FOR
 - "Who has the new #1 ___?" (charts: Billboard Hot 100, ARIA, box office, Steam, NYT bestsellers)
