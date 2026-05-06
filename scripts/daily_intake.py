@@ -67,8 +67,12 @@ def call_claude(prompt: str) -> str:
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
         messages=[{"role": "user", "content": prompt}],
     )
-    text_blocks = [b.text for b in response.content if hasattr(b, "text")]
-    raw = text_blocks[-1] if text_blocks else ""
+    # Collect all text blocks. Preamble suppression is handled by the system
+    # prompt and the regex strip in clean_response_text. Taking only the last
+    # block was unreliable — the brief sometimes lands in an earlier block.
+    raw = "\n".join(b.text for b in response.content if hasattr(b, "text"))
+    print(f"DEBUG: raw response length={len(raw)}")
+    print(f"DEBUG: raw preview (first 300): {raw[:300]!r}")
     return clean_response_text(raw)
 
 
