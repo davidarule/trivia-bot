@@ -1,10 +1,14 @@
 name: Tuesday Trivia Compile
 on:
   schedule:
-    # 6pm Sydney = 07:00 UTC (AEDT summer) or 08:00 UTC (AEST winter)
     - cron: '0 7 * * 2'
     - cron: '0 8 * * 2'
   workflow_dispatch:
+    inputs:
+      force_run:
+        description: 'Bypass Sydney day/hour guard (test fire)'
+        type: boolean
+        default: false
 
 jobs:
   compile:
@@ -21,3 +25,4 @@ jobs:
           DISCORD_WEBHOOK_WEEKLY: ${{ secrets.DISCORD_WEBHOOK_WEEKLY }}
           DISCORD_BOT_TOKEN_DAILY: ${{ secrets.DISCORD_BOT_TOKEN_DAILY }}
           DISCORD_DAILY_CHANNEL_ID: ${{ secrets.DISCORD_DAILY_CHANNEL_ID }}
+          TRIVIA_FORCE_RUN: ${{ inputs.force_run && '1' || '' }}

@@ -57,7 +57,7 @@ def post_to_discord(webhook_url: str, content: str) -> None:
 
 def main() -> None:
     now = datetime.now(SYDNEY)
-    if not in_intake_window(now):
+    if not in_intake_window(now) and not os.environ.get("TRIVIA_FORCE_RUN"):
         print(f"Not an intake window in Sydney ({now:%A %H:%M}); exiting.")
         return
 
