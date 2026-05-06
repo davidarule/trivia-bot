@@ -1,0 +1,45 @@
+Find light-hearted, trivia-worthy news stories from the past 48 hours suitable for a pub trivia night in Newcastle/Lake Macquarie, NSW, Australia. Today's date is [DATE]. This is a daily intake report that will be collated into a weekly trivia brief on Tuesday at 6pm AEST.
+
+COVERAGE
+- Mix of Australian and major global stories, weighted roughly 60/40 toward Australian content.
+
+STORY TYPES TO INCLUDE
+- Celebrity, royals, entertainment news
+- Sport results, oddities, records, retirements, transfers, milestones
+- Major business or sport news (acquisitions, launches). Do not filter for "quirky" — a major company or league story is marquee trivia content even when serious in tone, as long as it has a clean named answer.
+- Politics, court rulings, political gaffes, resignations — include any with a clean named answer; exclude only the grim ones (see below)
+- Viral animals, weird science, quirky human-interest, unusual records, weather oddities
+- Food, drink, pop culture milestones
+- Australian local quirks: wildlife incidents, weather oddities, viral local news. Australian hosts love these and they are often missed by global wires.
+
+STORY TYPES TO EXCLUDE
+- Deaths, fatal accidents, murders, terror attacks
+- War, conflict, military casualties
+- Natural disasters with significant casualties
+- Sexual assault, child abuse, domestic violence
+- Serious illness of public figures (unless the story is the recovery/return)
+
+QUESTION PATTERNS TO ACTIVELY HUNT FOR
+Pub trivia hosts pull "this week in news" questions from a small set of recurring patterns. For each pattern, check whether a notable story exists today and include it if so. If a pattern is quiet, skip it — do not force a weak entry.
+
+- "Who has the new #1 ___?" — songs, albums, films, streaming shows, video games, books. Check whether anything has newly topped a major chart (Billboard Hot 100, ARIA Singles, weekend box office, Steam, NYT bestsellers).
+- "Who won ___?" — major sporting events, awards shows, elections, talent-show finales.
+- "Which league / company / competition is in the news?" — any major event with a clean named answer.
+- "World record set or broken?" — sport, science, Guinness-style achievements (longest, biggest, fastest, oldest, first-ever).
+- "What unusual thing happened in [Australian city]?" — wildlife incidents, weather oddities, viral local news. Check ABC News, news.com.au, 9News, 7News, and city-specific outlets.
+- "Who said / did / wore ___?" — quotable gaffes, viral moments, surprising public statements, notable red-carpet or sporting-arena moments.
+- "What's new / launched / announced?" — major product launches, scientific findings with a clean headline, surprise album drops, casting announcements.
+
+Each bullet should be shaped like an answer to one of these patterns — i.e., have a clean named/numbered answer (a name, a number, a place, a date) that the host could ask for.
+
+If a pattern's first search doesn't surface a clearly notable story, try at least one alternative angle (named sponsors, specific geographies, common acronyms) before concluding the pattern is quiet today.
+
+OUTPUT FORMAT
+Brief daily intake — no headings, no shortlist, no rollup. Just bullets, grouped by the question pattern that surfaced them. Each bullet: one sentence stating the fact, one line of context (date, location, or why it matters). Aim for 5-10 bullets total. If it's a slow news day, fewer is fine. Keep it under 1500 characters total — this gets posted to a Discord channel.
+
+SOURCES
+- Australian: ABC News Australia, news.com.au, The Guardian Australia, Sydney Morning Herald, The Age, 9News, 7News, Newcastle Herald
+- Global: BBC, Reuters, AP, CNN, Guardian
+- Specialist: Billboard for music charts, ARIA for Australian charts, Box Office Mojo for film, ESPN/Sky Sports for sport business news
+- Avoid tabloids that fabricate
+- Verify any surprising claim against a second source before including it

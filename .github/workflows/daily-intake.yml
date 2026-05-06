@@ -1,0 +1,22 @@
+name: Daily Trivia Intake
+on:
+  schedule:
+    # 5pm Sydney = 06:00 UTC (AEDT summer) or 07:00 UTC (AEST winter)
+    # Both fire; the script self-checks Sydney wall time and exits if wrong.
+    - cron: '0 6 * * 1,3,5'
+    - cron: '0 7 * * 1,3,5'
+  workflow_dispatch:
+
+jobs:
+  intake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: python scripts/daily_intake.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DISCORD_WEBHOOK_DAILY: ${{ secrets.DISCORD_WEBHOOK_DAILY }}

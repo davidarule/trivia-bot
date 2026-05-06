@@ -1,0 +1,70 @@
+Compile a pub trivia "this week in the news" brief for tonight at 7pm AEST in Newcastle/Lake Macquarie, NSW, Australia. Today's date is [DATE].
+
+INPUTS
+The text below in <intakes> tags contains the daily intake reports from the past week, posted to the #daily-trivia Discord channel (typically last Wednesday's, Friday's, and yesterday's Monday intake — sometimes more if older messages are still in the channel). Use them as the primary input.
+
+In addition, do a fresh web sweep to catch anything that has broken since the most recent intake (typically yesterday's Monday 5pm Sydney intake), since it's now Tuesday 6pm Sydney.
+
+<intakes>
+[INTAKES]
+</intakes>
+
+COVERAGE
+- Mix of Australian and major global stories, weighted roughly 60/40 toward Australian content.
+- Skew toward stories from days 3-10 ago over the last 24 hours, since trivia hosts usually write questions a few days ahead.
+
+STORY TYPES TO INCLUDE
+- Celebrity, royals, entertainment news
+- Sport results, oddities, records, retirements, transfers, milestones
+- Major business or sport news (acquisitions, launches) with a clean named answer
+- Politics, court rulings, political gaffes, resignations with a clean named answer; exclude grim ones
+- Viral animals, weird science, quirky human-interest, unusual records, weather oddities
+- Food, drink, pop culture milestones
+- Australian local quirks: wildlife incidents, weather oddities, viral local news
+
+STORY TYPES TO EXCLUDE
+- Deaths, fatal accidents, murders, terror attacks
+- War, conflict, military casualties
+- Natural disasters with significant casualties
+- Sexual assault, child abuse, domestic violence
+- Serious illness of public figures (unless the story is the recovery/return)
+
+QUESTION PATTERNS TO ACTIVELY HUNT FOR
+- "Who has the new #1 ___?" (charts: Billboard Hot 100, ARIA, box office, Steam, NYT bestsellers)
+- "Who won ___?" (sporting events, awards, elections, talent-show finales)
+- "Which league / company / competition is in the news?"
+- "World record set or broken?"
+- "What unusual thing happened in [Australian city]?"
+- "Who said / did / wore ___?"
+- "What's new / launched / announced?"
+
+If a pattern's first search doesn't surface a clearly notable story, try at least one alternative angle (named sponsors, specific geographies, common acronyms) before concluding the pattern is quiet this week.
+
+COMPILATION RULES
+- Deduplicate stories that appeared across multiple daily intakes
+- Drop stale stories that have been overtaken by newer developments
+- Promote stories that have grown in significance since first intake
+- Add anything from the fresh Tuesday sweep that wasn't in the daily intakes
+
+OUTPUT FORMAT
+Sections in this order:
+
+SECTION 1 — News brief (always)
+Grouped under five headings: Australia, Global, Sport, Entertainment, Weird/Quirky. Under each, 3-5 bullets. Each bullet: one sentence stating the fact, one line of context (date, location, or why it matters). Aim for 12-20 bullets total.
+
+SECTION 2 — Most likely trivia question shortlist (always)
+3-5 stories shaped as the actual question the host might ask, each followed by the clean answer.
+
+SECTION 3 — Celebrity birthdays today (always)
+10 A-list household-name celebrities born on this calendar date (any year), each with their age today. Skip anyone who isn't a genuine household name globally or in Australia — no reality TV contestants, minor YouTubers, or niche figures. If fewer than 10 genuine A-listers were born today, list however many qualify and note the count.
+
+SECTION 4 — This month in history
+[INCLUDE_MONTH_HISTORY]
+If included: 20 famous events that happened anywhere in this calendar month (any day of the month), in any year from 1200AD to present. Mix sport, science, politics, culture, disasters, discoveries, premieres. Each entry: one sentence stating the event, the year, and the specific date if known.
+
+SOURCES
+- Australian: ABC News Australia, news.com.au, The Guardian Australia, Sydney Morning Herald, The Age, 9News, 7News, Newcastle Herald
+- Global: BBC, Reuters, AP, CNN, Guardian
+- Specialist: Billboard, ARIA, Box Office Mojo, ESPN/Sky Sports
+- Avoid tabloids that fabricate
+- Verify any surprising claim against a second source
