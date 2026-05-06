@@ -1,21 +1,21 @@
 Find light-hearted, trivia-worthy news stories from the past 48 hours suitable for a pub trivia night in Newcastle/Lake Macquarie, NSW, Australia. Today's date is [DATE]. This is a daily intake report that will be collated into a weekly trivia brief on Tuesday at 6pm AEST.
 
-IMPORTANT: Begin your response directly with the first bullet point. Do not include any preamble, search narration, meta-commentary, or explanation of what you are about to do. Do not output a heading or title. The first character of your response must be the start of the first bullet.
+IMPORTANT: Begin your response directly with the first section heading. Do not include any preamble, search narration, or meta-commentary.
 
 COVERAGE
 - Mix of Australian and major global stories, weighted roughly 60/40 toward Australian content.
-- Australian politics should cover federal AND all state governments — not just NSW.
+- Australian politics should cover federal AND all state/territory governments — not just NSW.
 
 STORY TYPES TO INCLUDE
 - Celebrity, royals, entertainment news
 - Sport results, oddities, records, retirements, transfers, milestones
 - Major business or sport news (acquisitions, launches). Do not filter for "quirky" — a major company or league story is marquee trivia content even when serious in tone, as long as it has a clean named answer.
 - Politics, court rulings, political gaffes, resignations — federal and all state/territory governments. Include any with a clean named answer; exclude only the grim ones (see below).
-- Viral social media moments: TikTok, YouTube, or X/Instagram moments that have crossed into mainstream news coverage (must be reported by a major outlet, not just social shares). Examples: record-breaking videos, viral stunts, celebrity posts that caused a stir, meme-worthy public moments.
+- Viral social media moments: TikTok, YouTube, or X/Instagram moments that have crossed into mainstream news coverage (must be reported by a major outlet, not just social shares).
 - Viral animals, weird science, quirky human-interest, unusual records, weather oddities
 - Food, drink, pop culture milestones
 - Australian local quirks: wildlife incidents, weather oddities, viral local news. Australian hosts love these and they are often missed by global wires.
-- "On this day" anniversaries: notable events on this calendar date, any year. Sporting moments, scientific discoveries, cultural firsts, famous births, landmark political events, historical disasters. Include even if not actively covered in today's news. Favour events with a clean named answer. No round-number constraint — any year is fair game.
+- "On this day" anniversaries: notable events on this calendar date, any year. Sporting moments, scientific discoveries, cultural firsts, famous births, landmark political events, historical disasters. Include even if not actively covered in today's news. No round-number constraint — any year is fair game.
 
 STORY TYPES TO EXCLUDE
 - Deaths, fatal accidents, murders, terror attacks
@@ -25,42 +25,50 @@ STORY TYPES TO EXCLUDE
 - Serious illness of public figures (unless the story is the recovery/return)
 - Cold cases, missing persons, historical disappearances, presumed-murdered investigations, body recoveries — excluded even if framed as a "breakthrough" or "development"
 
-The EXCLUDE list is mandatory and overrides every INCLUDE pattern, including "Australian local quirks". If a story belongs in both categories, exclude it. Note: the EXCLUDE list applies to current news only — historical "on this day" anniversaries are exempt (the Hindenburg, Titanic, etc. are legitimate historical trivia).
+The EXCLUDE list is mandatory and overrides every INCLUDE pattern. Note: the EXCLUDE list applies to current news only — historical "on this day" anniversaries are exempt (the Hindenburg, Titanic, etc. are legitimate historical trivia).
 
 QUESTION PATTERNS TO ACTIVELY HUNT FOR
-Pub trivia hosts pull "this week in news" questions from a small set of recurring patterns. For each pattern, check whether a notable story exists and include it if so. If a pattern is quiet, skip it — do not force a weak entry.
+Use these patterns to guide what to search for. They do NOT determine output structure — output is grouped by category (see OUTPUT FORMAT below).
 
-- "Who has the new #1 ___?" — songs, albums, films, streaming shows, video games, books. Check whether anything has newly topped a major chart (Billboard Hot 100, ARIA Singles, weekend box office, Steam, NYT bestsellers). If the same artist or title tops multiple charts simultaneously, combine into a single bullet — do not list the same story twice under different chart names.
+- "Who has the new #1 ___?" — songs, albums, films, streaming shows, video games, books. Check Billboard Hot 100, ARIA Singles, weekend box office, Steam, NYT bestsellers. If the same artist or title tops multiple charts simultaneously, combine into a single bullet — do not list the same story twice under different chart names.
 - "Who won ___?" — major sporting events, awards shows, elections, talent-show finales.
 - "Which league / company / competition is in the news?" — any major event with a clean named answer.
-- "World record set or broken?" — sport, science, Guinness-style achievements (longest, biggest, fastest, oldest, first-ever).
-- "What unusual thing happened in [Australian city]?" — wildlife incidents, weather oddities, viral local news. Check ABC News, news.com.au, 9News, 7News, and city-specific outlets.
-- "Who said / did / wore ___?" — quotable gaffes, viral moments, surprising public statements, notable red-carpet moments with a specific verifiable detail (time taken to make, designer, record broken). Exclude vague or subjective observations such as who arrived late, who looked good, or any entry without a clean named/numbered answer.
+- "World record set or broken?" — sport, science, Guinness-style achievements.
+- "What unusual thing happened in [Australian city]?" — wildlife incidents, weather oddities, viral local news.
+- "Who said / did / wore ___?" — quotable gaffes, viral moments, surprising public statements, notable red-carpet moments with a specific verifiable detail (time taken to make, designer, record broken). Exclude vague observations such as who arrived late, who looked good, or any entry without a clean named/numbered answer.
 - "What's new / launched / announced?" — major product launches, scientific findings with a clean headline, surprise album drops, casting announcements.
-- "What did [government] do?" — federal or any state/territory political decision, budget item, political gaffe or policy change with a clean named answer. Check ABC News, SMH, The Age, Newcastle Herald.
-- "What went viral this week?" — social media moment reported by a mainstream outlet: record-breaking video, viral stunt, celebrity post, meme-worthy public moment. Must have a clean named subject.
-- "What happened on this day X years ago?" — search for notable events on today's calendar date from any year in history. Cover sport, science, politics, culture, exploration, invention, historical disasters. Include even if not in today's news. Always state the year and how many years ago it was. For famous births, always include the person's current age. State facts only — do not add editorial commentary about why something makes good trivia (e.g. do not write "a classic trivia answer", "a pub-night staple", "useful as a 'year' or 'who' question", or any similar phrase).
+- "What did [government] do?" — federal or any state/territory political decision, budget item, political gaffe or policy change with a clean named answer.
+- "What went viral this week?" — social media moment reported by a mainstream outlet. Must have a clean named subject.
+- "What happened on this day X years ago?" — notable events on today's calendar date from any year. For famous births, always include the person's current age. State facts only — no editorial commentary about why something makes good trivia.
 
-Each bullet must have a clean named/numbered answer (a name, a number, a place, a date) that the host could ask for. This is a hard filter — if you cannot identify a specific name, number, place or date as the answer, drop the bullet entirely. Vague entries about "a strong group", "several players", "a number of", "some", or "the team" without specific names or counts are not acceptable.
+Each bullet must have a clean named/numbered answer (a name, a number, a place, a date). This is a hard filter — if you cannot identify a specific name, number, place or date as the answer, drop the bullet entirely. Vague entries about "a strong group", "several players", "a number of", "some", or "the team" without specific names or counts are not acceptable.
 
 Examples of bullets to drop:
   Bad: "The Knights had a strong group of players selected for the NSW City vs Country campaign." — no names, no number.
   Bad: "Several Hollywood stars attended a charity gala in LA this weekend." — no names.
   Bad: "A new Australian film opened to good reviews." — no title, no numbers.
 
-If a pattern's first search doesn't surface a clearly notable story, try at least one alternative angle (named sponsors, specific geographies, common acronyms) before concluding the pattern is quiet today.
-
 OUTPUT FORMAT
-Begin directly with the first bullet — no title, no preamble, no meta-commentary.
+Begin directly with the first section heading. No title, no preamble, no meta-commentary.
 
-One line per bullet. Pattern header in bold, then a dash, then the fact. Pack the key named answer (name, number, place, date) into that single line. No second sentence. No context line. No editorial commentary.
+Use these six section headings, in this order, formatted as markdown level-2 headings with the emoji shown:
 
-Good example:
-  **Who has the new #1?** — Olivia Rodrigo's "Drop Dead" debuted at No. 1 on the Billboard Hot 100 (week of 29 April), bumping Ella Langley's "Choosin' Texas" to No. 2.
-  **Who wore ___?** — Margot Robbie's custom Chanel dress at the 2026 Met Gala took 761 hours to make.
-  **What happened 72 years ago today?** — Roger Bannister ran the first sub-four-minute mile at Oxford's Iffley Road track (3:59.4, 6 May 1954).
+## 🇦🇺 Australia
+## 🌍 Global
+## ⚽ Sport
+## 🎬 Entertainment
+## 🦊 Weird/Quirky
+## 📅 On This Day
 
-Aim for 8-15 bullets total. If it's a slow news day, fewer is fine. The script handles Discord message splitting, so do not truncate for length.
+Under each heading, list bullets. Each bullet:
+  - Bold topic header (3-7 words capturing the headline) ending with a period
+  - One sentence stating the fact with the clean named/numbered answer
+  - No second sentence, no editorial commentary, no "context:" lines
+
+Example bullet format:
+  - **Margot Robbie's 761-hour Met Gala gown.** Margot Robbie's custom Chanel dress for the 2026 Met Gala took 761 hours to make, with a "Fashion Is Art" theme.
+
+Skip any section that has no items today — do not force entries into empty categories. Aim for 8-15 bullets total across all sections. Slow news day = fewer is fine.
 
 SOURCES
 - Australian: ABC News Australia, news.com.au, The Guardian Australia, Sydney Morning Herald, The Age, 9News, 7News, Newcastle Herald

@@ -28,8 +28,11 @@ def clean_response_text(text: str) -> str:
     # Strip any Daily intake heading emitted by Claude
     text = re.sub(r"\*?\*?Daily intake[^\n]*\n?", "", text, flags=re.IGNORECASE)
 
-    # Strip preamble before the first bold question-pattern header
-    match = re.search(r"\*\*(?:Who|Which|What|World|When)", text)
+    # Strip preamble: anchor on first markdown heading (## 🇦🇺 Australia, etc.)
+    # Falls back to bold question-pattern header if no markdown heading found.
+    match = re.search(r"^#+\s", text, re.MULTILINE)
+    if not match:
+        match = re.search(r"\*\*(?:Who|Which|What|World|When)", text)
     if match:
         text = text[match.start():]
 
@@ -68,11 +71,8 @@ def call_claude(prompt: str) -> str:
         messages=[{"role": "user", "content": prompt}],
     )
     # Collect all text blocks. Preamble suppression is handled by the system
-    # prompt and the regex strip in clean_response_text. Taking only the last
-    # block was unreliable — the brief sometimes lands in an earlier block.
+    # prompt and the regex strip in clean_response_text.
     raw = "\n".join(b.text for b in response.content if hasattr(b, "text"))
-    print(f"DEBUG: raw response length={len(raw)}")
-    print(f"DEBUG: raw preview (first 300): {raw[:300]!r}")
     return clean_response_text(raw)
 
 

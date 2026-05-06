@@ -29,9 +29,11 @@ def clean_response_text(text: str) -> str:
     # Strip any heading emitted by Claude that duplicates the script's header
     text = re.sub(r"\*?\*?(?:Trivia brief|Weekly brief|Tuesday brief)[^\n]*\n?", "", text, flags=re.IGNORECASE)
 
-    # Strip preamble: everything before the first bold all-caps section heading
-    # e.g. **AUSTRALIA**, **SPORT**, **SECTION 1**, **NEWS BRIEF**
-    match = re.search(r"\*\*(?:SECTION|AUSTRALIA|GLOBAL|SPORT|ENTERTAINMENT|WEIRD|NEWS BRIEF)", text, re.IGNORECASE)
+    # Strip preamble: anchor on first markdown heading line (#, ##, ###).
+    # Falls back to bold section markers if no markdown heading found.
+    match = re.search(r"^#+\s", text, re.MULTILINE)
+    if not match:
+        match = re.search(r"\*\*(?:SECTION|AUSTRALIA|GLOBAL|SPORT|ENTERTAINMENT|WEIRD|NEWS BRIEF|Pub Trivia)", text, re.IGNORECASE)
     if match:
         text = text[match.start():]
 
@@ -103,8 +105,6 @@ def call_claude(prompt: str) -> str:
         messages=[{"role": "user", "content": prompt}],
     )
     raw = "\n".join(b.text for b in response.content if hasattr(b, "text"))
-    print(f"DEBUG: raw response length={len(raw)}")
-    print(f"DEBUG: raw preview (first 300): {raw[:300]!r}")
     return clean_response_text(raw)
 
 

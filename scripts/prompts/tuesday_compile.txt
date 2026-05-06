@@ -67,14 +67,27 @@ SECTION 1 — News brief (always)
 Grouped under five headings: Australia, Global, Sport, Entertainment, Weird/Quirky. Under each, 3-5 bullets. Each bullet: one sentence stating the fact, one line of context (date, location, or why it matters). Aim for 15-25 bullets total.
 
 SECTION 2 — Most likely trivia question shortlist (always)
-5-8 stories shaped as the actual question the host might ask, each followed by the clean answer.
+5-8 stories shaped as the actual question the host might ask, each followed by the clean answer. CRITICAL: every question in this section must be about a story NOT already covered in Section 1. Use this section for additional newsworthy stories, niche trivia, or week-old details that didn't make the categorical brief above. If the same story appears in Section 1, it is excluded from Section 2.
 
 SECTION 3 — Celebrity birthdays today (always)
-10 A-list household-name celebrities born on this calendar date (any year), each with their age today. Skip anyone who isn't a genuine household name globally or in Australia — no reality TV contestants, minor YouTubers, or niche figures. If fewer than 10 genuine A-listers were born today, list however many qualify and note the count.
+10 strictly A-list celebrities born on this calendar date (any year). A-list means: instantly recognisable household names globally or in Australia — Hollywood leads, world-famous musicians, top-tier athletes, prime ministers/presidents, sports legends, billionaires, royals. EXCLUDE: TV hosts (unless globally famous like Oprah), supporting actors, B-list musicians, niche celebrities, reality TV figures, retired sportspeople below superstar level. If fewer than 10 truly A-list celebrities were born today, list however many qualify and note the count — do not pad with B-listers.
+
+Format: one line per person.
+  **Name** — age (born YEAR), one-line description.
+
+Example:
+  **George Clooney** — 65 (born 1961), American actor and director (Ocean's Eleven, ER).
 
 SECTION 4 — This month in history
 [INCLUDE_MONTH_HISTORY]
-If included: 20 famous events that happened anywhere in this calendar month (any day of the month), in any year from 1200AD to present. Mix sport, science, politics, culture, disasters, discoveries, premieres. Each entry: one sentence stating the event, the year, and the specific date if known.
+If included: 20 famous events that happened anywhere in this calendar month (any day of the month), in any year from 1200AD to present, listed in CHRONOLOGICAL ORDER from earliest year to latest year. Mix sport, science, politics, culture, disasters, discoveries, premieres.
+
+Format: one line per entry, chronological by year:
+  **DD MMM YYYY** — one-sentence description with clean named answer.
+
+Example:
+  **24 May 1844** — Samuel Morse sent the first telegraph message ("What hath God wrought").
+  **31 May 1859** — Big Ben's clock first started keeping time in London.
 
 SECTION 5 — On this day (always)
 Collate all "on this day" anniversary entries surfaced across the daily intakes this week, plus do a fresh search for any notable events on today's exact calendar date that weren't already captured. Aim for 8-12 entries. Mix sport, science, politics, culture, exploration, invention, historical disasters. Each entry: one sentence stating the event, the year, and how many years ago it was. For famous births, always include the person's current age. No round-number constraint — any year is fair game.
