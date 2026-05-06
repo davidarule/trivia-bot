@@ -30,7 +30,7 @@ The EXCLUDE list is mandatory and overrides every INCLUDE pattern, including "Au
 QUESTION PATTERNS TO ACTIVELY HUNT FOR
 Pub trivia hosts pull "this week in news" questions from a small set of recurring patterns. For each pattern, check whether a notable story exists and include it if so. If a pattern is quiet, skip it — do not force a weak entry.
 
-- "Who has the new #1 ___?" — songs, albums, films, streaming shows, video games, books. Check whether anything has newly topped a major chart (Billboard Hot 100, ARIA Singles, weekend box office, Steam, NYT bestsellers).
+- "Who has the new #1 ___?" — songs, albums, films, streaming shows, video games, books. Check whether anything has newly topped a major chart (Billboard Hot 100, ARIA Singles, weekend box office, Steam, NYT bestsellers). If the same artist or title tops multiple charts simultaneously, combine into a single bullet — do not list the same story twice under different chart names.
 - "Who won ___?" — major sporting events, awards shows, elections, talent-show finales.
 - "Which league / company / competition is in the news?" — any major event with a clean named answer.
 - "World record set or broken?" — sport, science, Guinness-style achievements (longest, biggest, fastest, oldest, first-ever).
@@ -39,7 +39,7 @@ Pub trivia hosts pull "this week in news" questions from a small set of recurrin
 - "What's new / launched / announced?" — major product launches, scientific findings with a clean headline, surprise album drops, casting announcements.
 - "What did [government] do?" — federal or any state/territory political decision, budget item, political gaffe or policy change with a clean named answer. Check ABC News, SMH, The Age, Newcastle Herald.
 - "What went viral this week?" — social media moment reported by a mainstream outlet: record-breaking video, viral stunt, celebrity post, meme-worthy public moment. Must have a clean named subject.
-- "What happened on this day X years ago?" — search for round-number anniversaries (10, 25, 50, 75, 100, 150, 200 years) of notable events on today's calendar date. Cover sport, science, politics, culture, exploration, invention. Include even if not in today's news. State the year and how many years ago it was.
+- "What happened on this day X years ago?" — search for round-number anniversaries (10, 25, 50, 75, 100, 150, 200 years) of notable events on today's calendar date. Cover sport, science, politics, culture, exploration, invention. Include even if not in today's news. Always state the year and how many years ago it was. For famous births, always include the person's current age. State facts only — do not add editorial commentary about why something makes good trivia (e.g. do not write "a classic trivia answer", "a pub-night staple", "useful as a 'year' or 'who' question", or any similar phrase).
 
 Each bullet should be shaped like an answer to one of these patterns — i.e., have a clean named/numbered answer (a name, a number, a place, a date) that the host could ask for.
 
@@ -50,7 +50,7 @@ Begin directly with the first bullet — no title, no preamble, no meta-commenta
 
 Bullets grouped by the question pattern that surfaced them. For each bullet write exactly two lines:
   Line 1: the fact stated plainly (who did what, where, when).
-  Line 2: one line of genuine context — the date, location, or why this story matters to a trivia crowd. Do NOT write "context:" followed by a description of why this qualifies as trivia. Write it as a short plain-English sentence a host could read aloud.
+  Line 2: one line of genuine context — the date, location, or why this story matters to a trivia crowd. Do NOT write "context:" followed by a description of why this qualifies as trivia. Do NOT add editorial commentary such as "a classic trivia answer", "a pub-night staple", "clean named answer is X", "useful as a 'year' or 'who' question", or any similar phrase. Write it as a short plain-English sentence a host could read aloud.
 
 Good example:
   **Who has the new #1?** — Olivia Rodrigo's "Drop Dead" debuted at No. 1 on the Billboard Hot 100 (week of 29 April), bumping Ella Langley's "Choosin' Texas" to No. 2.
