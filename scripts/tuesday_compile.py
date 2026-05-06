@@ -101,13 +101,13 @@ def main() -> None:
 
     intakes = fetch_recent_intakes(
         os.environ["DISCORD_DAILY_CHANNEL_ID"],
-        os.environ["DISCORD_BOT_TOKEN"],
+        os.environ["DISCORD_BOT_TOKEN_DAILY"],
     )
     prompt = load_prompt(date_str, intakes, include_history)
     compile_text = call_claude(prompt)
 
     header = f"**Trivia brief — {now:%a %d %b}**\n\n"
-    post_to_discord(os.environ["DISCORD_WEBHOOK_COMPILE"], header + compile_text)
+    post_to_discord(os.environ["DISCORD_WEBHOOK_WEEKLY"], header + compile_text)
     print("Posted.")
 
 

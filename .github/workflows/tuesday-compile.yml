@@ -18,6 +18,6 @@ jobs:
       - run: python scripts/tuesday_compile.py
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          DISCORD_WEBHOOK_COMPILE: ${{ secrets.DISCORD_WEBHOOK_COMPILE }}
-          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          DISCORD_WEBHOOK_WEEKLY: ${{ secrets.DISCORD_WEBHOOK_WEEKLY }}
+          DISCORD_BOT_TOKEN_DAILY: ${{ secrets.DISCORD_BOT_TOKEN_DAILY }}
           DISCORD_DAILY_CHANNEL_ID: ${{ secrets.DISCORD_DAILY_CHANNEL_ID }}
