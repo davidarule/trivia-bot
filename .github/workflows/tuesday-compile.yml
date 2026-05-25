@@ -1,14 +1,14 @@
 name: Tuesday Trivia Compile
+# Scheduled runs disabled — bot now triggered manually from local Mac (./tuesday.sh).
+# This workflow is kept as a break-glass fallback: trigger via the Actions tab in
+# GitHub if the Mac is unavailable. Tick force_run when triggering manually.
 on:
-  schedule:
-    - cron: '0 7 * * 2'
-    - cron: '0 8 * * 2'
   workflow_dispatch:
     inputs:
       force_run:
         description: 'Bypass Sydney day/hour guard (test fire)'
         type: boolean
-        default: false
+        default: true
 
 jobs:
   compile:

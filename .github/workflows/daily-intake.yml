@@ -1,14 +1,14 @@
 name: Daily Trivia Intake
+# Scheduled runs disabled — bot now triggered manually from local Mac (./daily.sh).
+# This workflow is kept as a break-glass fallback: trigger via the Actions tab in
+# GitHub if the Mac is unavailable. Tick force_run when triggering manually.
 on:
-  schedule:
-    - cron: '0 6 * * 1,3,5'
-    - cron: '0 7 * * 1,3,5'
   workflow_dispatch:
     inputs:
       force_run:
         description: 'Bypass Sydney day/hour guard (test fire)'
         type: boolean
-        default: false
+        default: true
 
 jobs:
   intake:
