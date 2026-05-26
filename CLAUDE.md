@@ -11,8 +11,10 @@ night in Newcastle/Lake Macquarie, NSW, Australia. Two scripts drive it:
   Mac.
 - **`scripts/tuesday_compile.py`** — pulls the week's daily intakes from the
   Discord channel history, does a fresh web sweep, and compiles a structured
-  trivia brief (5 sections: news brief, celebrity birthdays, this month in
-  history (first Tue of month only), on this day). Posts to `#trivia-report`.
+  trivia brief (sections: news brief, celebrity birthdays, this month in
+  history, on this day, today's special day when applicable, and the
+  Quizmasters "Fans & Followers" question). Each Tuesday brief drops stories
+  that ran in the previous week's brief. Posts to `#trivia-report`.
   Designed for Tuesday 6pm Sydney; triggered manually from this Mac.
 
 Both scripts use the Anthropic API with the `web_search` tool to find current
@@ -45,8 +47,8 @@ scripts/
 ├── tuesday_compile.py     # entry point for Tuesday compile
 └── prompts/
     ├── daily_intake.txt   # prompt for the daily intake
-    └── tuesday_compile.txt # prompt for the Tuesday compile (with [DATE],
-                            # [INTAKES], [INCLUDE_MONTH_HISTORY] placeholders)
+    └── tuesday_compile.txt # prompt for the Tuesday compile (with [DATE] and
+                            # [INTAKES] placeholders)
 daily.sh                   # wrapper to run daily_intake.py
 tuesday.sh                 # wrapper to run tuesday_compile.py
 .env                       # secrets (gitignored)

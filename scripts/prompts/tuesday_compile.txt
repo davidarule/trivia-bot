@@ -5,6 +5,8 @@ The text below in <intakes> tags contains the daily intake reports from the past
 
 In addition, do a fresh web sweep to catch anything that has broken since the most recent intake (typically yesterday's Monday 5pm Sydney intake), since it's now Tuesday 6pm Sydney.
 
+Also review LAST WEEK'S Tuesday brief — the most recent brief posted to #trivia-report — so you can drop anything it already covered (see COMPILATION RULES).
+
 <intakes>
 [INTAKES]
 </intakes>
@@ -18,14 +20,14 @@ COVERAGE
 
 STORY TYPES TO INCLUDE
 - Celebrity, royals, entertainment news
-- Sport results, oddities, records, retirements, transfers, milestones
+- Sport results, oddities, records, retirements, transfers, milestones. Always use full official team names ("New Zealand Warriors", not "Warriors") and name the competition and round ("NRL Round 12", "AFL Round 11").
 - Major business or sport news (acquisitions, launches) with a clean named answer
 - Politics, court rulings, gaffes, resignations — federal and all state/territory governments, with a clean named answer; exclude grim ones
 - Viral social media moments reported by mainstream outlets: record-breaking videos, viral stunts, celebrity posts, meme-worthy public moments — must have a clean named subject
 - Viral animals, weird science, quirky human-interest, unusual records, weather oddities
 - Food, drink, pop culture milestones
 - Australian local quirks: wildlife incidents, weather oddities, viral local news
-- "On this day" anniversaries from the daily intakes: carry these through as a dedicated section
+- "On this day" anniversaries for today's calendar date: generated fresh in this Tuesday run as a dedicated section (the daily intakes no longer include them)
 
 STORY TYPES TO EXCLUDE
 - Deaths, fatal accidents, murders, terror attacks
@@ -53,17 +55,18 @@ If a pattern's first search doesn't surface a clearly notable story, try at leas
 Every bullet must have a clean named/numbered answer (a name, a number, a place, a date). This is a hard filter — drop any vague entry about "a strong group", "several", "a number of", "some", or "the team" without specific names or counts.
 
 COMPILATION RULES
+- Drop any story that already appeared in LAST WEEK'S Tuesday brief (the most recent brief posted to #trivia-report) — only carry forward genuinely new developments
 - Deduplicate stories that appeared across multiple daily intakes
 - Drop stale stories that have been overtaken by newer developments
 - Promote stories that have grown in significance since first intake
 - Add anything from the fresh Tuesday sweep that wasn't in the daily intakes
-- Carry through all "on this day" anniversary entries from the daily intakes into Section 4
+- Generate Section 4 "on this day" entirely from a fresh search for today's date (the daily intakes no longer carry anniversaries)
 
 OUTPUT FORMAT
 Sections in this order:
 
 SECTION 1 — News brief (always)
-Grouped under five headings: Australia, Global, Sport, Entertainment, Weird/Quirky. Under each, 3-6 bullets. This is the comprehensive news roundup — every newsworthy story from the week's intakes plus the fresh Tuesday sweep should land in the appropriate category here. Each bullet: one bold topic header (3-7 words capturing the headline) ending with a period, then one sentence stating the fact with the clean named/numbered answer. No second sentence, no editorial commentary. Aim for 18-28 bullets total across the five categories.
+Grouped under five headings: Australia, Global, Sport, Entertainment, Weird/Quirky. Under each, 3-6 bullets. This is the comprehensive news roundup — every newsworthy story from the week's intakes plus the fresh Tuesday sweep should land in the appropriate category here. Each bullet: one bold topic header (3-7 words capturing the headline) ending with a period, then one or two sentences stating the fact and the surrounding trivia-worthy detail — embed the names, numbers, places and dates that could each be a quiz answer, and keep the clean named/numbered answer prominent. No editorial commentary. Aim for 18-28 bullets total across the five categories.
 
 Example bullet format:
   - **RBA hikes cash rate to 4.35%.** On 5 May 2026 the RBA Board increased the cash rate target by 25 basis points in an 8-1 vote, returning rates to post-pandemic peaks.
@@ -77,9 +80,8 @@ Format: one line per person.
 Example:
   **George Clooney** — 65 (born 1961), American actor and director (Ocean's Eleven, ER).
 
-SECTION 3 — This month in history
-[INCLUDE_MONTH_HISTORY]
-If included: up to 10 famous events that happened anywhere in this calendar month (any day of the month), in any year from 1200AD to present, listed in CHRONOLOGICAL ORDER from earliest year to latest year. Mix sport, science, politics, culture, disasters, discoveries, premieres.
+SECTION 3 — This month in history (always)
+Up to 10 famous events that happened anywhere in this calendar month (any day of the month), in any year from 1200AD to present, listed in CHRONOLOGICAL ORDER from earliest year to latest year. Mix sport, science, politics, culture, disasters, discoveries, premieres. Give each entry a short extra detail (a name, number, place, or outcome) beyond the bare event. Do not repeat events that appeared in last week's Tuesday brief.
 
 Format: one line per entry, chronological by year:
   **DD MMM YYYY** — one-sentence description with clean named answer.
@@ -89,7 +91,13 @@ Example:
   **31 May 1859** — Big Ben's clock first started keeping time in London.
 
 SECTION 4 — On this day (always)
-Collate "on this day" anniversary entries surfaced across the daily intakes this week, plus a fresh search for any notable events on today's exact calendar date that weren't already captured. Maximum 7 entries — pick the strongest. Mix sport, science, politics, culture, exploration, invention, historical disasters. Each entry: one sentence stating the event, the year, and how many years ago it was. For famous births, always include the person's current age. No round-number constraint — any year is fair game.
+From a fresh search, find notable events on today's exact calendar date (any year). Maximum 7 entries — pick the strongest. Mix sport, science, politics, culture, exploration, invention, historical disasters. List them in chronological order, oldest year first. Each entry: one sentence stating the event, the year, and how many years ago it was. For famous births, always include the person's current age. No round-number constraint — any year is fair game.
+
+SECTION 5 — Today's special day (when applicable)
+If today — or any day within +/- 2 days — is a notable observance (e.g. Towel Day, International Nurses Day, St Patrick's Day), add a short section: one or two sentences explaining what the day is, then 1-3 trivia questions with clean named answers. Pick light, celebratory days suited to pub trivia. SKIP somber or grief-related observances (e.g. National Sorry Day) that clash with the brief's tone and exclude list. Omit this section entirely if nothing notable falls in the window.
+
+SECTION 6 — Quizmasters Fans & Followers question (always)
+Fetch https://quizmasters.com.au/ and include that week's "This Week's Fans and Followers Question" with its answer. The question is the <h2> heading under the trivia banner; the answer is hidden behind a "show me the answer" graphic but is present in the page HTML inside the accordion-collapse / accordion-body block. Note: a markdown-only fetch may drop the hidden answer, so read the raw HTML. Format as a Q line and an A line.
 
 SOURCES
 - Australian: ABC News Australia, news.com.au, The Guardian Australia, Sydney Morning Herald, The Age, 9News, 7News, Newcastle Herald

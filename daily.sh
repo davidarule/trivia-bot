@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
-# Manual trigger for the daily intake. Loads secrets from .env, bypasses the
-# Sydney time-of-day guard, and posts to #daily-trivia.
+# Post a Claude-generated daily intake to #daily-trivia.
 #
-# Usage:  ./daily.sh
+# Claude Code does the web research and writes the brief (following
+# scripts/prompts/daily_intake.txt). This wrapper loads secrets from .env and
+# posts the brief via the channel webhook.
+#
+# Usage:  ./daily.sh BRIEF_FILE         # post a brief file
+#         ./daily.sh < brief.md         # or pipe the brief on stdin
 
 set -euo pipefail
 
@@ -26,4 +30,4 @@ else
   PY=$(command -v python3 || command -v python)
 fi
 
-TRIVIA_FORCE_RUN=1 "$PY" scripts/daily_intake.py
+"$PY" scripts/post_brief.py daily "$@"

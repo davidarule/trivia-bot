@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
-# Manual trigger for the Tuesday compile. Loads secrets from .env, bypasses
-# the Sydney time-of-day guard, and posts to #trivia-report.
+# Post a Claude-generated Tuesday compile to #trivia-report.
 #
-# Usage:  ./tuesday.sh
+# Claude Code reads the week's intakes (scripts/fetch_intakes.py), does a fresh
+# web sweep, and writes the brief (following scripts/prompts/tuesday_compile.txt).
+# This wrapper loads secrets from .env and posts the brief via the channel webhook.
+#
+# Usage:  ./tuesday.sh BRIEF_FILE       # post a brief file
+#         ./tuesday.sh < brief.md       # or pipe the brief on stdin
 
 set -euo pipefail
 
@@ -24,4 +28,4 @@ else
   PY=$(command -v python3 || command -v python)
 fi
 
-TRIVIA_FORCE_RUN=1 "$PY" scripts/tuesday_compile.py
+"$PY" scripts/post_brief.py weekly "$@"
