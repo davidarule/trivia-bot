@@ -3,65 +3,75 @@
 ## What this repo does
 
 Generates light-hearted, trivia-worthy news briefs for a weekly pub trivia
-night in Newcastle/Lake Macquarie, NSW, Australia. Two scripts drive it:
+night in Newcastle/Lake Macquarie, NSW, Australia, and posts them to Discord.
 
-- **`scripts/daily_intake.py`** — a quick intake of trivia-worthy stories from
-  the last 48 hours, posted to the `#daily-trivia` Discord channel. Designed
-  to fire Mon/Wed/Fri at 5pm Sydney time, but now triggered manually from this
-  Mac.
-- **`scripts/tuesday_compile.py`** — pulls the week's daily intakes from the
-  Discord channel history, does a fresh web sweep, and compiles a structured
-  trivia brief (sections: news brief, celebrity birthdays, this month in
-  history, on this day, today's special day when applicable, and the
-  Quizmasters "Fans & Followers" question). Each Tuesday brief drops stories
-  that ran in the previous week's brief. Posts to `#trivia-report`.
-  Designed for Tuesday 6pm Sydney; triggered manually from this Mac.
+**Claude Code does the research and writes the briefs.** The Python scripts no
+longer call any model — they only fetch the week's intakes from Discord and post
+a finished brief that Claude wrote. The workflow:
 
-Both scripts use the Anthropic API with the `web_search` tool to find current
-stories, then post to Discord via webhooks.
+- **Daily intake** → Claude researches the last 48 hours (web search), writes a
+  brief following `scripts/prompts/daily_intake.txt`, and posts it to
+  `#daily-trivia`. Designed for Mon/Wed/Fri ~5pm Sydney, triggered manually.
+- **Tuesday compile** → Claude pulls the week's daily intakes from Discord, reads
+  last week's Tuesday brief (to drop already-covered stories), does a fresh web
+  sweep, and compiles a structured brief following
+  `scripts/prompts/tuesday_compile.txt` (sections: news brief, celebrity
+  birthdays, this month in history, on this day, today's special day when
+  applicable, and the Quizmasters "Fans & Followers" question). Posts to
+  `#trivia-report`. Designed for Tuesday ~6pm Sydney, triggered manually.
 
 ## The two commands
 
+The `/daily` and `/tuesday` slash commands (in `.claude/commands/`) drive the
+whole flow — they tell Claude to research, write the brief, and post it. Each
+ends by posting through a thin wrapper:
+
 ```bash
-./daily.sh      # fire the daily intake, posts to #daily-trivia
-./tuesday.sh    # fire the Tuesday compile, posts to #trivia-report
+./daily.sh   BRIEF_FILE   # or: ./daily.sh   < brief.md   → posts to #daily-trivia
+./tuesday.sh BRIEF_FILE   # or: ./tuesday.sh < brief.md   → posts to #trivia-report
 ```
 
 Both wrappers:
 - Load secrets from `.env` (gitignored)
-- Set `TRIVIA_FORCE_RUN=1` to bypass the Sydney time-of-day guard built into
-  the Python scripts
 - Use `.venv/bin/python` if it exists, otherwise the system `python3`
+- Call `scripts/post_brief.py {daily|weekly} <brief>`, which prepends a dated
+  header, chunks the text under Discord's 2000-char limit, and posts via the
+  channel webhook. It prints `Posted.` on success.
+
+There is **no** time-of-day guard and **no** Anthropic API key — the scripts just
+fetch and post.
 
 ## Prerequisites (already done — don't redo unless setting up fresh)
 
-- `.venv/` exists with `requirements.txt` installed
-- `.env` exists and contains all five secrets (see `.env.example`)
+- `.venv/` exists with `requirements.txt` installed (`requests` only)
+- `.env` exists and contains all four secrets (see `.env.example`):
+  `DISCORD_WEBHOOK_DAILY`, `DISCORD_WEBHOOK_WEEKLY`, `DISCORD_BOT_TOKEN_DAILY`,
+  `DISCORD_DAILY_CHANNEL_ID`
 - `daily.sh` and `tuesday.sh` are executable
 
 ## Key files
 
 ```
+.claude/commands/
+├── daily.md               # /daily — research + write + post the daily intake
+└── tuesday.md             # /tuesday — compile + post the weekly brief
 scripts/
-├── daily_intake.py        # entry point for daily intake
-├── tuesday_compile.py     # entry point for Tuesday compile
+├── post_brief.py          # posts a Claude-written brief to Discord (daily|weekly)
+├── fetch_intakes.py       # prints the week's #daily-trivia intakes (Tuesday input)
 └── prompts/
-    ├── daily_intake.txt   # prompt for the daily intake
-    └── tuesday_compile.txt # prompt for the Tuesday compile (with [DATE] and
-                            # [INTAKES] placeholders)
-daily.sh                   # wrapper to run daily_intake.py
-tuesday.sh                 # wrapper to run tuesday_compile.py
+    ├── daily_intake.txt    # spec Claude follows to write the daily intake
+    └── tuesday_compile.txt # spec for the Tuesday brief ([DATE] / [INTAKES] placeholders)
+daily.sh                   # wrapper: load .env, post_brief.py daily
+tuesday.sh                 # wrapper: load .env, post_brief.py weekly
 .env                       # secrets (gitignored)
 .env.example               # template showing which secrets are needed
-.github/workflows/         # GitHub Actions workflows — schedule disabled,
-                            # kept as break-glass fallback only
 ```
 
 ## Output format and tone — what "good" looks like
 
 - 60% Australian content, 40% global
 - Each bullet must have a clean named/numbered answer (a name, a number, a
-  place, a date). Vague entries are filtered out by the prompt.
+  place, a date). Vague entries are dropped (hard filter in the prompt specs).
 - Excludes: deaths, fatal accidents, war casualties, sexual assault, cold
   cases. Historical "on this day" anniversaries are exempt from the exclude
   list.
@@ -69,24 +79,27 @@ tuesday.sh                 # wrapper to run tuesday_compile.py
 
 ## Common things you might be asked to do
 
-- **"Fire the daily"** → run `./daily.sh` and confirm whether the
-  "Posted." line appeared in stdout.
-- **"Fire the Tuesday compile"** → run `./tuesday.sh` likewise.
+- **"Fire the daily"** → run `/daily`: research, write the brief, post via
+  `./daily.sh`, and confirm the `Posted.` line appeared in stdout.
+- **"Fire the Tuesday compile"** → run `/tuesday` likewise (posts via
+  `./tuesday.sh`).
 - **"Tweak the prompt"** → edit `scripts/prompts/daily_intake.txt` or
-  `scripts/prompts/tuesday_compile.txt`. After edits, commit with a
-  descriptive message and push.
-- **"Look at the output"** — check the Discord channel directly; the script
-  only prints "Posted." to stdout.
+  `scripts/prompts/tuesday_compile.txt`. Propose the diff first rather than
+  rewriting wholesale. After edits, commit with a descriptive message and push.
+- **"Look at the output"** — check the Discord channel directly; the post step
+  only prints `Posted.` (and per-chunk HTTP status) to stdout.
 
 ## Things to flag honestly
 
-- If `./daily.sh` succeeds but Discord shows nothing, the webhook URL in
+- If the post step succeeds but Discord shows nothing, the webhook URL in
   `.env` may be invalid or pointing at the wrong channel. Don't claim it
-  posted unless you saw "Posted." in stdout and the user confirms Discord.
+  posted unless you saw `Posted.` in stdout and the user confirms Discord.
 - The prompt files are tuned iteratively. If asked to change them, propose
-  the diff first (or use dry-run) rather than rewriting wholesale.
-- The Tuesday compile fetches the last 20 messages from `#daily-trivia`. It
-  does NOT currently filter to bot-authored messages, so user replies in
-  that channel get included as data and could in principle influence output
-  (mild prompt-injection risk). A bot-author filter in `fetch_recent_intakes`
-  is the proper fix but hasn't been done yet.
+  the diff first rather than rewriting wholesale.
+- `fetch_intakes.py` fetches the last 20 messages from `#daily-trivia` and does
+  NOT filter to bot-authored messages, so user replies in that channel get
+  included as Tuesday-compile input and could in principle influence output
+  (mild prompt-injection risk). A bot-author filter is the proper fix but
+  hasn't been done yet.
+- Reading last week's Tuesday brief for dedup uses the daily bot token against
+  the `#trivia-report` channel id — never print the token.
