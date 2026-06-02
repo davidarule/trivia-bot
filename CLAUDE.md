@@ -43,10 +43,13 @@ fetch and post.
 
 ## Prerequisites (already done — don't redo unless setting up fresh)
 
-- `.venv/` exists with `requirements.txt` installed (`requests` only)
-- `.env` exists and contains all four secrets (see `.env.example`):
-  `DISCORD_WEBHOOK_DAILY`, `DISCORD_WEBHOOK_WEEKLY`, `DISCORD_BOT_TOKEN_DAILY`,
-  `DISCORD_DAILY_CHANNEL_ID`
+- `.env` exists and already contains the four secrets needed to run the
+  commands (see `.env.example`): `DISCORD_WEBHOOK_DAILY`,
+  `DISCORD_WEBHOOK_WEEKLY`, `DISCORD_BOT_TOKEN_DAILY`, `DISCORD_DAILY_CHANNEL_ID`.
+  No `ANTHROPIC_API_KEY` is needed — the scripts don't call any model.
+- `requests` is available (either in `.venv/`, or system `python3` — the wrappers
+  fall back to `python3` when `.venv/` is absent). `requirements.txt` is just
+  `requests`.
 - `daily.sh` and `tuesday.sh` are executable
 
 ## Key files
