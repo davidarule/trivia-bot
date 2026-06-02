@@ -3,7 +3,13 @@ Compile a pub trivia "this week in the news" brief for tonight at 7pm AEST in Ne
 INPUTS
 The text below in <intakes> tags contains the daily intake reports from the past week, posted to the #daily-trivia Discord channel (typically last Wednesday's, Friday's, and yesterday's Monday intake — sometimes more if older messages are still in the channel). Use them as the primary input.
 
-In addition, do a fresh web sweep to catch anything that has broken since the most recent intake (typically yesterday's Monday 5pm Sydney intake), since it's now Tuesday 6pm Sydney.
+In addition, do a fresh web sweep to catch anything that has broken since the most recent intake (typically yesterday's Monday 5pm Sydney intake), since it's now Tuesday 6pm Sydney. Note: intakes can be days old (dailies don't always fire), so treat the sweep as the main source of fresh material, not just a top-up.
+
+SEARCH STRATEGY — run TWO kinds of searches, not one:
+- ANCHOR searches confirm specific known events (a final result, a chart #1, a round of fixtures). Necessary, but they only verify what you already expect.
+- DISCOVERY searches are broad and open-ended ("weird news this week", "Guinness world record this week", "what went viral this week reported by mainstream outlets", "science breakthrough this week", "major business deal this week"). The fun/quirky/viral half of the brief — a whole category — only surfaces from these. Do not skip them.
+RECENCY CHECK — before including any current-news story, verify it actually broke in roughly the last 7-10 days. Check the original publication date, not a syndicated re-post: studies/records/mergers often recirculate months after the fact. Drop anything stale, and never include an "announcement of a future announcement" — there must be a concrete named/numbered answer that already exists.
+AUSTRALIAN SOURCES — the major AU news domains (abc.net.au, news.com.au, 9news.com.au, 7news.com.au, theguardian.com) are NOT crawlable, so do not pass them to allowed_domains (the call will error). Reach AU stories instead via Wikipedia's "2026 in Australia", AAP/syndication, and non-blocked outlets. Australian local-quirk discovery is harder as a result — search for it deliberately.
 
 Also review LAST WEEK'S Tuesday brief — the most recent brief posted to #trivia-report — so you can drop anything it already covered (see COMPILATION RULES).
 
@@ -68,6 +74,8 @@ Sections in this order:
 SECTION 1 — News brief (always)
 Grouped under five headings: Australia, Global, Sport, Entertainment, Weird/Quirky. Under each, 3-6 bullets. This is the comprehensive news roundup — every newsworthy story from the week's intakes plus the fresh Tuesday sweep should land in the appropriate category here. Each bullet: one bold topic header (3-7 words capturing the headline) ending with a period, then one or two sentences stating the fact and the surrounding trivia-worthy detail — embed the names, numbers, places and dates that could each be a quiz answer, and keep the clean named/numbered answer prominent. No editorial commentary. Aim for 18-28 bullets total across the five categories.
 
+The Global heading is the easiest to leave thin — guard against it. Fill it with a DIVERSE mix (world politics/elections, business/M&A, science/space milestones, royals, culture/anniversaries), not a single beat. Do not repeat the same category two weeks running (e.g. a China space-launch story in consecutive briefs) — if last week's brief already covered that beat, find a different global story. Aim for 4-6 Global bullets.
+
 Example bullet format:
   - **RBA hikes cash rate to 4.35%.** On 5 May 2026 the RBA Board increased the cash rate target by 25 basis points in an 8-1 vote, returning rates to post-pandemic peaks.
 
@@ -106,3 +114,4 @@ SOURCES
 - Historical: Britannica, Wikipedia, On This Day (.com)
 - Avoid tabloids that fabricate
 - Verify any surprising claim against a second source
+- The major AU news domains above are not crawlable via allowed_domains — reach AU content through Wikipedia "2026 in Australia", AAP/syndication, and non-blocked outlets (see SEARCH STRATEGY)
