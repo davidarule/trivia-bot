@@ -9,7 +9,7 @@ SEARCH STRATEGY — run TWO kinds of searches, not one:
 - ANCHOR searches confirm specific known events (a final result, a chart #1, a round of fixtures). Necessary, but they only verify what you already expect.
 - DISCOVERY searches are broad and open-ended ("weird news this week", "Guinness world record this week", "what went viral this week reported by mainstream outlets", "science breakthrough this week", "major business deal this week"). The fun/quirky/viral half of the brief — a whole category — only surfaces from these. Do not skip them.
 RECENCY CHECK — before including any current-news story, verify it actually broke in roughly the last 7-10 days. Check the original publication date, not a syndicated re-post: studies/records/mergers often recirculate months after the fact. Drop anything stale, and never include an "announcement of a future announcement" — there must be a concrete named/numbered answer that already exists.
-AUSTRALIAN SOURCES — the major AU news domains (abc.net.au, news.com.au, 9news.com.au, 7news.com.au, theguardian.com) are NOT crawlable, so do not pass them to allowed_domains (the call will error). Reach AU stories instead via Wikipedia's "2026 in Australia", AAP/syndication, and non-blocked outlets. Australian local-quirk discovery is harder as a result — search for it deliberately.
+AUSTRALIAN SOURCES — the major AU news domains are NOT crawlable, so do not pass them to allowed_domains (the call will error). Instead run `scripts/fetch_au_news.py`, which pulls recent headlines via RSS from ABC News, The Guardian Australia, the SMH, The Age, 7News, 9News and the Newcastle Herald (feeds the crawler can't reach), then open a specific story (WebFetch/curl) to confirm detail before quoting it. Also use Wikipedia's "2026 in Australia" and AAP/syndication. (news.com.au blocks automated fetches and is omitted.) Australian local-quirk discovery is harder than global — pursue it deliberately.
 
 Also review LAST WEEK'S Tuesday brief — the most recent brief posted to #trivia-report — so you can drop anything it already covered (see COMPILATION RULES).
 
@@ -114,4 +114,4 @@ SOURCES
 - Historical: Britannica, Wikipedia, On This Day (.com)
 - Avoid tabloids that fabricate
 - Verify any surprising claim against a second source
-- The major AU news domains above are not crawlable via allowed_domains — reach AU content through Wikipedia "2026 in Australia", AAP/syndication, and non-blocked outlets (see SEARCH STRATEGY)
+- The major AU news domains above are not crawlable via allowed_domains — run `scripts/fetch_au_news.py` for AU headlines via RSS, plus Wikipedia "2026 in Australia" and AAP/syndication (see SEARCH STRATEGY)

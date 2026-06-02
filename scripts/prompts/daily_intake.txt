@@ -26,7 +26,7 @@ STORY TYPES TO EXCLUDE
 
 The EXCLUDE list is mandatory and overrides every INCLUDE pattern.
 
-SEARCH STRATEGY — run TWO kinds of searches, not one. ANCHOR searches confirm specific known events (a result, a chart #1). DISCOVERY searches are broad and open-ended ("weird news this week", "Guinness world record this week", "what went viral this week reported by mainstream outlets", "science breakthrough this week") — the fun/quirky/viral material only surfaces from these, so do not skip them. Note: the major AU news domains (abc.net.au, news.com.au, 9news.com.au, 7news.com.au, theguardian.com) are NOT crawlable via allowed_domains; reach AU stories via Wikipedia "2026 in Australia", AAP/syndication, and non-blocked outlets.
+SEARCH STRATEGY — run TWO kinds of searches, not one. ANCHOR searches confirm specific known events (a result, a chart #1). DISCOVERY searches are broad and open-ended ("weird news this week", "Guinness world record this week", "what went viral this week reported by mainstream outlets", "science breakthrough this week") — the fun/quirky/viral material only surfaces from these, so do not skip them. Note: the major AU news domains are NOT crawlable via allowed_domains; run `scripts/fetch_au_news.py` for recent AU headlines via RSS (ABC, Guardian AU, SMH, The Age, 7News, 9News, Newcastle Herald — news.com.au blocks fetches and is omitted), then open a story to confirm detail. Also use Wikipedia "2026 in Australia" and AAP/syndication.
 
 QUESTION PATTERNS TO ACTIVELY HUNT FOR
 Use these patterns to guide what to search for. They do NOT determine output structure — output is grouped by category (see OUTPUT FORMAT below).

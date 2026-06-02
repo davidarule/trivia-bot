@@ -28,8 +28,10 @@ Workflow:
    - Make the Global section a DIVERSE mix (politics, business, science/space,
      royals, culture) and don't repeat last week's global beat. It's the section
      most likely to come out thin — push it to 4-6 strong bullets.
-   - The big AU news sites aren't crawlable; reach AU content via Wikipedia
-     "2026 in Australia", AAP, and non-blocked outlets.
+   - The big AU news sites aren't crawlable; run `scripts/fetch_au_news.py` for
+     AU headlines via RSS (ABC, Guardian AU, SMH, The Age, 7News, 9News,
+     Newcastle Herald), plus Wikipedia "2026 in Australia". Open a specific story
+     to confirm detail before quoting it.
 4. Apply the compilation rules: drop stories already in last week's brief, dedup
    across intakes, drop stale stories, promote ones that have grown, and enforce
    the clean-named-answer hard filter.

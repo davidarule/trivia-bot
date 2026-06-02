@@ -10,8 +10,9 @@ Workflow:
    across the sources the spec lists. Run BOTH anchor searches (verify known
    events) AND broad discovery searches ("weird/viral/record this week") — the
    fun/quirky half only surfaces from discovery. The big AU news sites aren't
-   crawlable; reach AU content via Wikipedia "2026 in Australia" and non-blocked
-   outlets. Verify any surprising claim against a second source before including it.
+   crawlable; run `scripts/fetch_au_news.py` for AU headlines via RSS (ABC,
+   Guardian AU, SMH, The Age, 7News, 9News, Newcastle Herald), plus Wikipedia
+   "2026 in Australia". Verify any surprising claim against a second source first.
 3. Write the brief to a temp file (e.g. `/tmp/daily-brief.md`). Begin directly
    with the first `## ` section heading — no title, preamble, or search
    narration. `post_brief.py` prepends the dated header.

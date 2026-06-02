@@ -58,9 +58,12 @@ fetch and post.
 .claude/commands/
 ├── daily.md               # /daily — research + write + post the daily intake
 └── tuesday.md             # /tuesday — compile + post the weekly brief
+.claude/settings.json      # allows fetch_au_news.py to run without a prompt
 scripts/
 ├── post_brief.py          # posts a Claude-written brief to Discord (daily|weekly)
 ├── fetch_intakes.py       # prints the week's #daily-trivia intakes (Tuesday input)
+├── fetch_au_news.py       # AU news headlines via RSS (the WebSearch crawler is
+│                          # blocked from the big AU domains; this reaches them)
 └── prompts/
     ├── daily_intake.txt    # spec Claude follows to write the daily intake
     └── tuesday_compile.txt # spec for the Tuesday brief ([DATE] / [INTAKES] placeholders)
@@ -106,3 +109,8 @@ tuesday.sh                 # wrapper: load .env, post_brief.py weekly
   hasn't been done yet.
 - Reading last week's Tuesday brief for dedup uses the daily bot token against
   the `#trivia-report` channel id — never print the token.
+- The `WebSearch`/`WebFetch` crawler is blocked from the major AU news domains
+  (abc.net.au, news.com.au, 9news, 7news, theguardian), so `allowed_domains`
+  with those will error. Use `scripts/fetch_au_news.py` (RSS, runs without a
+  prompt) for AU coverage. AU non-sport stories still tend to run thin — pursue
+  them deliberately.
