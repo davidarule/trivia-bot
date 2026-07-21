@@ -4,7 +4,14 @@
     "allow": [
       "Bash(python3 scripts/fetch_au_news.py:*)",
       "Bash(.venv/bin/python scripts/fetch_au_news.py:*)",
-      "Bash(./scripts/fetch_au_news.py:*)"
+      "Bash(./scripts/fetch_au_news.py:*)",
+      "Bash(python3 scripts/fetch_intakes.py:*)",
+      "Bash(.venv/bin/python scripts/fetch_intakes.py:*)",
+      "Bash(./daily.sh:*)",
+      "Bash(./tuesday.sh:*)",
+      "WebSearch",
+      "WebFetch",
+      "Edit(/tmp/**)"
     ]
   }
 }
