@@ -9,6 +9,11 @@
       "Bash(.venv/bin/python scripts/fetch_intakes.py:*)",
       "Bash(./daily.sh:*)",
       "Bash(./tuesday.sh:*)",
+      "Bash(set:*)",
+      "Bash(source .env)",
+      "Bash(curl:*)",
+      "Bash(date:*)",
+      "Bash(python3 -c:*)",
       "WebSearch",
       "WebFetch",
       "Edit(/tmp/**)"

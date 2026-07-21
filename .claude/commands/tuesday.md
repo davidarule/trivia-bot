@@ -3,10 +3,11 @@ intakes plus a fresh web sweep, then post it — the scripts no longer call the
 Anthropic API.
 
 Workflow:
-1. Fetch the week's daily intakes — pick the interpreter the way the wrappers do
-   (`.venv` if present, else system `python3`):
-       PY=$([ -x .venv/bin/python ] && echo .venv/bin/python || echo python3)
-       "$PY" scripts/fetch_intakes.py
+1. Fetch the week's daily intakes:
+       python3 scripts/fetch_intakes.py
+   (Use `.venv/bin/python` instead if the venv exists — both are allowlisted for
+   unattended runs; the plain-`python3` form is the default because the timer
+   runs headless and every command must match the settings.json allowlist.)
    It prints the #daily-trivia messages from the past week — the primary input.
 2. Read LAST WEEK'S Tuesday brief so you can drop anything it already covered.
    It lives in #trivia-report (channel id `1501358120725909504`). Read it with
@@ -37,15 +38,19 @@ Workflow:
    the clean-named-answer hard filter.
 5. Write the compiled brief to a temp file (e.g. `/tmp/tuesday-brief.md`),
    beginning directly with the first section heading — no preamble.
-6. Show the user the full compiled brief and get their sign-off BEFORE posting.
-   Note honestly anything weak (thin section, AU/global balance off, light week).
-   Post only after they approve.
-7. Post it: `./tuesday.sh /tmp/tuesday-brief.md` — the wrapper loads `.env` and
-   posts to #trivia-report via the webhook.
-8. Check stdout for the "Posted." confirmation line. If it appeared, tell the
-   user it posted and to verify in #trivia-report. If the script failed or
-   printed anything unexpected, surface the actual output and stop — do NOT
-   claim success.
+6. Post it directly: `./tuesday.sh /tmp/tuesday-brief.md` — the wrapper loads
+   `.env` and posts to #trivia-report via the webhook. There is NO approval
+   gate: David removed it on 2026-07-21 ("its working well") so the compile can
+   fire unattended from the trivia-tuesday systemd timer. If a human is present
+   and asks to review first, showing the draft is still fine — but never block
+   an unattended run waiting for input.
+7. Check stdout for the "Posted." confirmation line. If it appeared, report
+   success. If the script failed or printed anything unexpected, surface the
+   actual output and stop — do NOT claim success.
+8. End with a short honest quality note in your final output (NOT in the brief
+   itself — it must not reach Discord): thin sections, AU/global balance off,
+   stale intakes, a light week. On timer runs this lands in
+   ~/.local/state/trivia-bot/tuesday.log where David can review it.
 
-Don't narrate each search as you go. Sweep thoroughly, compile, show the draft,
-post on approval, and report.
+Don't narrate each search as you go. Sweep thoroughly, compile, post, and
+report.
