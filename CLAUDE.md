@@ -18,7 +18,8 @@ a finished brief that Claude wrote. The workflow:
   `scripts/prompts/tuesday_compile.txt` (sections: news brief, celebrity
   birthdays, this month in history, on this day, today's special day when
   applicable, and the Quizmasters "Fans & Followers" question). Posts to
-  `#trivia-report`. Designed for Tuesday ~6pm Sydney, triggered manually.
+  `#trivia-report`. Fires Tuesday ~4pm Sydney (systemd `trivia-tuesday.timer`,
+  Tue 15:57) so the brief lands well before the 7pm trivia start.
 
 ## The two commands
 

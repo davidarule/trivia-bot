@@ -1,4 +1,4 @@
-Find light-hearted, trivia-worthy news stories from the past 48 hours suitable for a pub trivia night in Newcastle/Lake Macquarie, NSW, Australia. Today's date is [DATE]. This is a daily intake report that will be collated into a weekly trivia brief on Tuesday at 6pm AEST.
+Find light-hearted, trivia-worthy news stories from the past 48 hours suitable for a pub trivia night in Newcastle/Lake Macquarie, NSW, Australia. Today's date is [DATE]. This is a daily intake report that will be collated into a weekly trivia brief on Tuesday at 4pm AEST.
 
 IMPORTANT: Begin your response directly with the first section heading. Do not include any preamble, search narration, or meta-commentary.
 
